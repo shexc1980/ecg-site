@@ -24,3 +24,25 @@ a:hover { color:#0f1a30; }
 .prose h1 { color:var(--navy); font-size:28px; }
 .muted { color:#5b6372; font-size:14px; }
 @media (max-width:820px) { .grid { grid-template-columns:1fr; } .hero { padding:40px 0 32px; } .lead { margin-top:40px; } }
+/* v2 (Nov 6 2026): navigation, intro text, lists, note band, contact list */
+.topbar { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+.hero .topbar:first-child { margin-bottom:28px; }
+.hero-small .topbar:first-child { margin-bottom:0; }
+nav a { color:var(--white); text-decoration:none; margin-left:22px; font-size:15px; letter-spacing:.02em; }
+nav a:hover, nav a[aria-current="page"] { color:var(--gold); }
+.intro { max-width:62ch; font-size:18px; margin:0 0 32px; }
+.prose h2 { color:var(--navy); font-size:20px; margin:32px 0 8px; }
+.prose ul { padding-left:20px; margin:0 0 8px; }
+.prose li { margin:4px 0; }
+.note { margin:40px 0 0; padding:20px 24px; background:var(--white); border-left:3px solid var(--gold); border-radius:6px; }
+.note h2 { font-size:17px; color:var(--navy); margin:0 0 4px; }
+.note p { margin:0; }
+.cta { margin-top:32px; font-weight:600; color:var(--navy); }
+.contacts dt { font-weight:600; color:var(--navy); margin-top:16px; }
+.contacts dd { margin:2px 0 0; }
+@media (max-width:820px) { nav a { margin:0 18px 0 0; } }
+/* v2 layout fixes: inner-page logo size beside the nav; prose column aligned with header and footer */
+.logo-link { flex:0 0 auto; line-height:0; }
+.hero-small .logo-link img { width:min(220px, 55vw); }
+.prose { max-width:1040px; }
+.prose > * { max-width:720px; }
